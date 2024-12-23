@@ -138,22 +138,22 @@ const server = http.createServer(async (req, res) => {
 
     req.on('data', chunk => { body += chunk.toString(); });
     req.on('end', async () => {
-        if (req.method === 'POST' && req.url === '/register') {
+        if (req.method === 'POST' && req.url === 'register') {
             await registerUser(req, res, body);
-        } else if (req.method === 'POST' && req.url === '/login') {
+        } else if (req.method === 'POST' && req.url === 'login') {
             await loginUser(req, res, body);
-        } else if (req.method === 'POST' && req.url === '/logout') {
+        } else if (req.method === 'POST' && req.url === 'logout') {
             await logoutUser(res);
-        }else if(req.method === 'POST' && req.url === '/addPet'){
+        }else if(req.method === 'POST' && req.url === 'addPet'){
             await AddPet(req, res, body);
         }
-        else if(req.method === 'POST' && req.url === '/FetchAllPet'){
+        else if(req.method === 'POST' && req.url === 'FetchAllPet'){
             await FetchAllPet(req, res, body);
         }
-        else if(req.method === 'POST' && req.url === '/GetAppointment'){
+        else if(req.method === 'POST' && req.url === 'GetAppointment'){
             await GetAppointment(req, res, body);
         }
-        else if(req.method === 'POST' && req.url === '/fetchAppointment'){
+        else if(req.method === 'POST' && req.url === 'fetchAppointment'){
             await fetchAppointment(req, res, body);
         }
          else {
