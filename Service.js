@@ -1,8 +1,7 @@
 const http = require('http');
 const { MongoClient } = require('mongodb');
 
-const uri = "mongodb+srv://furkanbabo741:rAF52xfVokkj1JxR@cluster0.djthv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0&ssl=true&sslValidate=false";
-//const uri = "mongodb+srv://furkanbabo741:rAF52xfVokkj1JxR@cluster0.djthv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "mongodb+srv://furkanbabo741:rAF52xfVokkj1JxR@cluster0.djthv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 const client = new MongoClient(uri);
 
 let usersCollection;
